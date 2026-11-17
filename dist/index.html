@@ -2,9 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
     <meta name="theme-color" content="#f5f5f2" />
-    <meta name="description" content="A quiet, private place to keep track of daily spending." />
+    <meta
+      name="description"
+      content="A quiet, private place to keep track of daily spending."
+    />
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="stylesheet" href="./styles.css" />
     <title>Daybook — Daily expenses</title>
@@ -12,59 +18,121 @@
   <body>
     <main class="app-shell">
       <header class="topbar">
-        <a id="brand-home" class="brand" href="#calendar" aria-label="Daybook home">
+        <a
+          id="brand-home"
+          class="brand"
+          href="#calendar"
+          aria-label="Daybook home"
+        >
           <span class="brand-mark" aria-hidden="true">d.</span>
           <span>daybook</span>
         </a>
-        <button id="language-switcher" class="language-switcher" type="button" role="switch" aria-label="Ngôn ngữ" aria-checked="true" data-language="vi" title="Chuyển sang tiếng Anh">
+        <button
+          id="language-switcher"
+          class="language-switcher"
+          type="button"
+          role="switch"
+          aria-label="Ngôn ngữ"
+          aria-checked="true"
+          data-language="vi"
+          title="Chuyển sang tiếng Anh"
+        >
           <span class="language-thumb" aria-hidden="true"></span>
           <span class="language-option language-option-en">EN</span>
           <span class="language-option language-option-vi">VI</span>
         </button>
-        <span class="privacy-note"><span class="lock-icon" aria-hidden="true">⌑</span> Just for you</span>
+        <span class="privacy-note"
+          ><span class="lock-icon" aria-hidden="true">⌑</span> Just for
+          you</span
+        >
       </header>
 
-      <section id="calendar-view" class="view calendar-view" aria-labelledby="calendar-heading">
+      <section
+        id="calendar-view"
+        class="view calendar-view"
+        aria-labelledby="calendar-heading"
+      >
         <div class="eyebrow">A little more mindful</div>
         <div class="page-heading-row">
           <div>
             <h1 id="calendar-heading">Your spending</h1>
             <p class="subtitle">Pick a day to see where it went.</p>
           </div>
-          <button id="today-button" class="text-button" type="button">Today <span aria-hidden="true">↗</span></button>
+          <button id="today-button" class="text-button" type="button">
+            Today <span aria-hidden="true">↗</span>
+          </button>
         </div>
 
         <div class="calendar-card">
           <div class="month-bar">
-            <button id="prev-month" class="icon-button" type="button" aria-label="Previous month">‹</button>
+            <button
+              id="prev-month"
+              class="icon-button"
+              type="button"
+              aria-label="Previous month"
+            >
+              ‹
+            </button>
             <h2 id="month-label" aria-live="polite"></h2>
-            <button id="next-month" class="icon-button" type="button" aria-label="Next month">›</button>
+            <button
+              id="next-month"
+              class="icon-button"
+              type="button"
+              aria-label="Next month"
+            >
+              ›
+            </button>
           </div>
           <div class="month-total-card">
-            <div><span class="month-total-label">Spent this month</span><span id="month-total-caption" class="month-total-caption"></span></div>
+            <div>
+              <span class="month-total-label">Spent this month</span
+              ><span
+                id="month-total-caption"
+                class="month-total-caption"
+              ></span>
+            </div>
             <strong id="month-total">0</strong>
           </div>
           <div class="weekday-grid" aria-hidden="true">
-            <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+            <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span
+            ><span>Thu</span><span>Fri</span><span>Sat</span>
           </div>
-          <div id="calendar-grid" class="calendar-grid" role="grid" aria-label="Calendar"></div>
-          <div class="calendar-legend"><span class="legend-dot"></span> Has expenses</div>
+          <div
+            id="calendar-grid"
+            class="calendar-grid"
+            role="grid"
+            aria-label="Calendar"
+          ></div>
+          <div class="calendar-legend">
+            <span class="legend-dot"></span> Has expenses
+          </div>
         </div>
 
         <div class="below-calendar">
-          <div><span class="eyebrow">YOUR OWN LITTLE LEDGER</span><p>Entries stay in this browser on this device.</p></div>
+          <div>
+            <span class="eyebrow">YOUR OWN LITTLE LEDGER</span>
+            <p>Entries stay in this browser on this device.</p>
+          </div>
           <span class="leaf-mark" aria-hidden="true">✳</span>
         </div>
       </section>
 
-      <section id="day-view" class="view day-view hidden" aria-labelledby="day-title">
-        <button id="back-calendar" class="back-button" type="button"><span aria-hidden="true">←</span> Calendar</button>
+      <section
+        id="day-view"
+        class="view day-view hidden"
+        aria-labelledby="day-title"
+      >
+        <button id="back-calendar" class="back-button" type="button">
+          <span aria-hidden="true">←</span> Calendar
+        </button>
         <div class="day-heading">
           <div>
             <div class="eyebrow">YOUR DAILY LOG</div>
             <h1 id="day-title"></h1>
           </div>
-          <div class="day-stamp" aria-hidden="true"><span id="stamp-month"></span><b id="stamp-day"></b></div>
+          <div class="day-stamp" aria-hidden="true">
+            <span id="stamp-month"></span><b id="stamp-day"></b>
+          </div>
         </div>
 
         <div class="total-card">
@@ -73,54 +141,173 @@
           <span class="total-caption">for this day</span>
         </div>
 
-        <div class="list-heading"><h2>Expenses</h2><span id="expense-count" class="count-pill">0 entries</span><button id="copy-day" class="copy-day-button" type="button" disabled>Copy day</button></div>
+        <div class="list-heading">
+          <h2>Expenses</h2>
+          <span id="expense-count" class="count-pill">0 entries</span
+          ><button id="copy-day" class="copy-day-button" type="button" disabled>
+            Copy day
+          </button>
+        </div>
         <div id="expense-list" class="expense-list"></div>
-        <button id="add-expense" class="primary-button add-button" type="button"><span aria-hidden="true">＋</span> Add an expense</button>
+        <button
+          id="add-expense"
+          class="primary-button add-button"
+          type="button"
+        >
+          <span aria-hidden="true">＋</span> Add an expense
+        </button>
       </section>
 
-      <section id="form-view" class="view form-view hidden" aria-labelledby="form-title">
-        <button id="cancel-form" class="back-button" type="button"><span aria-hidden="true">←</span> Back to the day</button>
-        <div class="wizard-heading"><div class="eyebrow">ADD AN EXPENSE</div><span id="wizard-count" class="count-pill">1 of 3</span></div>
+      <section
+        id="form-view"
+        class="view form-view hidden"
+        aria-labelledby="form-title"
+      >
+        <button id="cancel-form" class="back-button" type="button">
+          <span aria-hidden="true">←</span> Back to the day
+        </button>
+        <div class="wizard-heading">
+          <div class="eyebrow">ADD AN EXPENSE</div>
+          <span id="wizard-count" class="count-pill">1 of 3</span>
+        </div>
         <h1 id="form-title">Add a photo</h1>
         <p id="form-date" class="subtitle form-date"></p>
         <form id="expense-form">
           <section class="wizard-step" data-wizard-step="0">
-            <p class="step-intro">Take a photo or choose one from your library. You can skip this step.</p>
-            <div class="photo-section wizard-photo-section">
-              <div><span class="field-label">Expense photo</span><p class="field-hint">A receipt or anything you want to remember.</p></div>
-              <label class="photo-picker" for="photo"><span aria-hidden="true">＋</span> Open camera or photos</label>
-              <input id="photo" name="photo" class="visually-hidden" type="file" accept="image/*" capture="environment" />
+            <p class="step-intro">
+              Take a photo or choose one from your library. You can skip this
+              step.
+            </p>
+            <div class="photo-section">
+              <div>
+                <span class="field-label">Expense photo</span>
+                <p class="field-hint">
+                  A receipt or anything you want to remember.
+                </p>
+              </div>
+              <label class="photo-picker" for="photo"
+                ><span aria-hidden="true">＋</span> Open camera or photos</label
+              >
+              <input
+                id="photo"
+                name="photo"
+                class="visually-hidden"
+                type="file"
+                accept="image/*"
+                capture="environment"
+              />
               <div id="photo-preview" class="photo-preview hidden"></div>
             </div>
-            <div class="wizard-actions"><button id="skip-photo" class="skip-button" type="button">Skip photo</button><button id="continue-photo" class="primary-button wizard-next" type="button">Continue <span aria-hidden="true">→</span></button></div>
+            <div class="wizard-actions">
+              <button id="skip-photo" class="skip-button" type="button">
+                Skip photo</button
+              ><button
+                id="continue-photo"
+                class="primary-button wizard-next"
+                type="button"
+              >
+                Continue <span aria-hidden="true">→</span>
+              </button>
+            </div>
           </section>
           <section class="wizard-step hidden" data-wizard-step="1">
-            <p class="step-intro">How much did you spend? You can skip the amount for now.</p>
-            <label class="field-label" for="amount">Amount <span class="optional">Optional</span></label>
-            <div class="amount-wrap"><input id="amount" name="amount" type="number" inputmode="decimal" min="0.01" step="0.01" placeholder="0.00" aria-label="Amount" /></div>
-            <div id="edit-date-field" class="edit-date-field hidden"><label class="field-label" for="edit-date">Date</label><input id="edit-date" name="date" type="date" /></div>
-            <div class="wizard-actions"><button id="skip-amount" class="skip-button" type="button">Skip amount</button><button id="continue-amount" class="primary-button wizard-next" type="button">Continue <span aria-hidden="true">→</span></button></div>
+            <p class="step-intro">
+              How much did you spend? You can skip the amount for now.
+            </p>
+            <label class="field-label" for="amount"
+              >Amount <span class="optional">Optional</span></label
+            >
+            <div class="amount-wrap">
+              <input
+                id="amount"
+                name="amount"
+                type="number"
+                inputmode="decimal"
+                min="0.01"
+                step="0.01"
+                placeholder="0.00"
+                aria-label="Amount"
+              />
+            </div>
+            <div id="edit-date-field" class="edit-date-field hidden">
+              <label class="field-label" for="edit-date">Date</label
+              ><input id="edit-date" name="date" type="date" />
+            </div>
+            <div class="wizard-actions">
+              <button id="skip-amount" class="skip-button" type="button">
+                Skip amount</button
+              ><button
+                id="continue-amount"
+                class="primary-button wizard-next"
+                type="button"
+              >
+                Continue <span aria-hidden="true">→</span>
+              </button>
+            </div>
           </section>
           <section class="wizard-step hidden" data-wizard-step="2">
-            <p class="step-intro">Add a title and any extra details. Both are optional.</p>
-            <label class="field-label" for="note">Title <span class="optional">Optional</span></label>
-            <input id="note" name="note" class="note-input" type="text" maxlength="120" placeholder="Coffee, groceries, bus fare…" />
-            <label class="field-label description-label" for="description">Additional details <span class="optional">Optional</span></label>
-            <textarea id="description" name="description" class="description-input" maxlength="600" placeholder="Add more context about this expense…" rows="4"></textarea>
-            <div class="wizard-actions"><button id="skip-details" class="skip-button" type="button">Skip &amp; save</button><button class="primary-button wizard-next" type="submit">Save expense <span aria-hidden="true">→</span></button></div>
+            <p class="step-intro">
+              Add a title and any extra details. Both are optional.
+            </p>
+            <label class="field-label" for="note"
+              >Title <span class="optional">Optional</span></label
+            >
+            <input
+              id="note"
+              name="note"
+              class="note-input"
+              type="text"
+              maxlength="120"
+              placeholder="Coffee, groceries, bus fare…"
+            />
+            <label class="field-label description-label" for="description"
+              >Additional details <span class="optional">Optional</span></label
+            >
+            <textarea
+              id="description"
+              name="description"
+              class="description-input"
+              maxlength="600"
+              placeholder="Add more context about this expense…"
+              rows="4"
+            ></textarea>
+            <div class="wizard-actions">
+              <button id="skip-details" class="skip-button" type="button">
+                Skip &amp; save</button
+              ><button class="primary-button wizard-next" type="submit">
+                Save expense <span aria-hidden="true">→</span>
+              </button>
+            </div>
           </section>
         </form>
-        <p class="storage-hint"><span aria-hidden="true">⌑</span> Saved on this device</p>
+        <p class="storage-hint">
+          <span aria-hidden="true">⌑</span> Saved on this device
+        </p>
       </section>
 
-      <footer class="footer">A gentler way to keep track <span>·</span> Your data stays yours</footer>
+      <footer class="footer">
+        A gentler way to keep track <span>·</span> Your data stays yours
+      </footer>
     </main>
 
     <div id="toast" class="toast" role="status" aria-live="polite"></div>
-    <div id="photo-lightbox" class="photo-lightbox hidden" role="dialog" aria-modal="true" aria-label="Expense photo">
-      <button id="close-photo" class="close-photo" type="button" aria-label="Close photo">×</button>
+    <div
+      id="photo-lightbox"
+      class="photo-lightbox hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Expense photo"
+    >
+      <button
+        id="close-photo"
+        class="close-photo"
+        type="button"
+        aria-label="Close photo"
+      >
+        ×
+      </button>
       <img id="lightbox-image" alt="Expanded expense photo" />
     </div>
-    <script src="./app.js" defer></script>
+    <script src="./app.js" type="module"></script>
   </body>
 </html>

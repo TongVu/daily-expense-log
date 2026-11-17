@@ -1,0 +1,23 @@
+{
+  "name": "daily-expense-log",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Daybook — a local-first daily expense log",
+  "type": "module",
+  "scripts": {
+    "dev": "python3 -m http.server 8080 --directory dist",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "node --test",
+    "check": "npm run format:check && npm test"
+  },
+  "engines": {
+    "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
+  },
+  "devDependencies": {
+    "fake-indexeddb": "^6.2.8",
+    "jsdom": "^31.0.1",
+    "postcss": "^8.5.33",
+    "prettier": "^3.10.1"
+  }
+}
