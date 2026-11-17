@@ -29,7 +29,7 @@ function t(english) {
 }
 
 async function loadTranslations() {
-  const response = await fetch(`/locales/${currentLanguage}.json`);
+  const response = await fetch(`./locales/${currentLanguage}.json`);
   if (!response.ok) throw new Error(`Could not load ${currentLanguage} translations`);
   translations = await response.json();
 }
@@ -548,7 +548,7 @@ async function start() {
     applyLanguage();
     await renderCalendar();
     await renderDay();
-    if ('serviceWorker' in navigator) navigator.serviceWorker.register('/service-worker.js').catch(() => {});
+    if ('serviceWorker' in navigator) navigator.serviceWorker.register('./service-worker.js').catch(() => {});
   } catch {
     notify(t('Local storage is unavailable in this browser.'));
   }

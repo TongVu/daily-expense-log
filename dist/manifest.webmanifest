@@ -2,7 +2,7 @@
   "name": "Daybook — Daily expenses",
   "short_name": "Daybook",
   "description": "A private daily expense log.",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#f5f5f2",
   "theme_color": "#f5f5f2",
